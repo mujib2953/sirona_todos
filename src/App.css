@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: lightgray;
+}
+
+.App {
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 40px;
+
+    background-color: gray;
+
+    color: #ccc;
+}
+
+.App h2 {
+    margin: 0 0 20px 0;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+
+    border-left: 1px solid #333;
+    padding-left: 13px;
+    padding-bottom: 10px;
+}
+
+.row:nth-last-child(2) {
+    border: 0;
+}
+
+.row label {
+    padding-bottom: 5px;
+}
+
+.row textarea {
+    height: 30px;
+    resize: none;
+    padding: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+
+    background-color: #333;
+    color: #fff;
+}
+
+.row::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    border: 1px solid #aaa;
+    background-color: #333;
+
+    position: absolute;
+    margin-left: -25px;
+}
+
+.row.focused {
+    border-color: white;
+}
+
+.row.focused label {
+    color: white;
+}
+
+.row.focused::before {
+    border-color: white;
+}
+
+.row.row.focused textarea {
+    border-color: white;
+}
+
+.row.completed::before {
+    border-color: green;
+    background-color: white;
+    content: "\2713";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-center {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-center button {
+    padding: 10px 20px;
+    border-radius: 25px;
+
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+
+    background-color: blue;
+    color: white;
+
+    cursor: pointer;
+}
